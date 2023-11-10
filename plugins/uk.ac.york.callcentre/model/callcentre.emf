@@ -1,0 +1,38 @@
+@namespace(uri="http://www.york.ac.uk/callcentre/1.1.0", prefix="callcentre")
+package callcentre;
+
+class Model {
+	attr String name;
+	val Step[*] steps;
+	val Transition[*] transitions;
+}
+
+abstract class Step {
+	attr String name;
+	attr String text;
+	ref Transition[*]#to incoming;
+	ref Transition[*]#from outgoing;
+	val Comment[*] comments;
+}
+
+class Statement extends Step {}
+class Decision extends Step {}
+
+class CallRedirection extends Step {
+	attr String number;
+}
+
+class InputQuestion extends Step {
+    attr String variable;
+}
+
+class Transition {
+	attr String name;
+	ref Step#outgoing from;
+	ref Step#incoming to;
+}
+
+class Comment {
+	attr String author;
+	attr String text;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated callcentre -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="uk.ac.york.callcentre.presentation.CallcentreModelWizardID"
+            name="%_UI_CallcentreModelWizard_label"
+            class="uk.ac.york.callcentre.presentation.CallcentreModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CallcentreModelFile.gif">
+         <description>%_UI_CallcentreModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated callcentre -->
+      <editor
+            id="uk.ac.york.callcentre.presentation.CallcentreEditorID"
+            name="%_UI_CallcentreEditor_label"
+            icon="icons/full/obj16/CallcentreModelFile.gif"
+            extensions="callcentre"
+            class="uk.ac.york.callcentre.presentation.CallcentreEditor"
+            contributorClass="uk.ac.york.callcentre.presentation.CallcentreActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:filter="http://www.eclipse.org/sirius/diagram/description/filter/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="callcentre" version="12.0.0.2017041100">
+  <ownedViewpoints name="Design" modelFileExtension="callcentre">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Call Centre Diagram" domainClass="callcentre::Model" enablePopupBars="true">
+      <metamodel href="http://www.york.ac.uk/callcentre/1.1.0#/"/>
+      <filters xsi:type="filter:CompositeFilterDescription" name="Hide No Transitions">
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']" semanticConditionExpression="aql:not self.isNoTransition()"/>
+      </filters>
+      <validationSet name="Call Centre Rules">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="Check Transition Source Not Equal Target" level="ERROR" message="The source and target of a transition cannot be the same" targetClass="callcentre::Transition">
+          <audits auditExpression="aql:not(self.from.equals(self.to))"/>
+        </ownedRules>
+      </validationSet>
+      <defaultLayer name="Default">
+        <nodeMappings name="Statement Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::Statement">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Redirection Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::CallRedirection">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Input Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::InputQuestion">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Decision Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::Decision">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </nodeMappings>
+        <toolSections name="Create Nodes">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Statement" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::Statement" referenceName="steps">
+                <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Statement">
+                  <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                    <initialOperation/>
+                  </buttons>
+                  <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                    <initialOperation/>
+                  </buttons>
+                  <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Create%20Statement']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
+                  <groups name="Default Group" labelExpression="Group" domainClass="callcentre::Statement" semanticCandidateExpression="var:self">
+                    <controls xsi:type="properties:TextDescription" name="callcentre::Statement name" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('name')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('name'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('name').changeable" valueExpression="feature:name">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="var:newValue"/>
+                      </initialOperation>
+                    </controls>
+                    <controls xsi:type="properties:TextDescription" name="callcentre::Statement description" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('text')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('text'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('text').changeable" valueExpression="feature:text">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:SetValue" featureName="text" valueExpression="var:newValue"/>
+                      </initialOperation>
+                    </controls>
+                  </groups>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Redirection" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Redirection%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::CallRedirection" referenceName="steps"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Input" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Input%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::InputQuestion" referenceName="steps"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Decision" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::Decision" referenceName="steps"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+      <additionalLayers name="Transition Layer">
+        <edgeMappings name="Transition Edge" semanticCandidatesExpression="aql:self.transitions" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Input%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Redirection%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Input%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Redirection%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node']" targetFinderExpression="aql:self.to" sourceFinderExpression="aql:self.from" domainClass="callcentre::Transition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12" showIcon="false" labelExpression="feature:name">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="Create Transitions ">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Transition Edge" precondition="aql:not(preSource.equals(preTarget))" edgeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(callcentre::Model)">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::Transition" referenceName="transitions">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="from" valueExpression="aql:source"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="to" valueExpression="aql:target"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </additionalLayers>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="uk.ac.york.callcentre.design.Services"/>
+  </ownedViewpoints>
+</description:Group>

@@ -4,7 +4,7 @@
     <semanticResources>example.callcentre</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_l6xgUAzBEeuDCYUyY32CwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="new Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="24ecb4bb-a031-4e5d-b393-dc47d16ca8fb">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="new Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="27f0a92e-05ec-461b-ba5d-e2464aeb429a">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']"/>
         <target xmi:type="callcentre:Model" href="example.callcentre#/"/>
       </ownedRepresentationDescriptors>
@@ -38,7 +38,7 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_m7ogYQzBEeuDCYUyY32CwA" fontName=".AppleSystemUIFont" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_m7ogYgzBEeuDCYUyY32CwA" x="325" y="356" width="285" height="113"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_BabTYAzCEeuDCYUyY32CwA" type="2001" element="_BYBfoAzCEeuDCYUyY32CwA">
+        <children xmi:type="notation:Node" xmi:id="_BabTYAzCEeuDCYUyY32CwA" visible="false" type="2001" element="_BYBfoAzCEeuDCYUyY32CwA">
           <children xmi:type="notation:Node" xmi:id="_Bab6cAzCEeuDCYUyY32CwA" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_Bab6cQzCEeuDCYUyY32CwA" y="5"/>
           </children>
@@ -49,7 +49,7 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_BabTYQzCEeuDCYUyY32CwA" fontName=".AppleSystemUIFont" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BabTYgzCEeuDCYUyY32CwA" x="64" y="685" width="177" height="89"/>
         </children>
-        <children xmi:type="notation:Node" xmi:id="_BachgAzCEeuDCYUyY32CwA" type="2001" element="_BYEi8AzCEeuDCYUyY32CwA">
+        <children xmi:type="notation:Node" xmi:id="_BachgAzCEeuDCYUyY32CwA" visible="false" type="2001" element="_BYEi8AzCEeuDCYUyY32CwA">
           <children xmi:type="notation:Node" xmi:id="_BadIkAzCEeuDCYUyY32CwA" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_BadIkQzCEeuDCYUyY32CwA" y="5"/>
           </children>
@@ -103,6 +103,35 @@
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_KDFyUwzCEeuDCYUyY32CwA" fontName=".AppleSystemUIFont" fontHeight="12"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KDFyVAzCEeuDCYUyY32CwA" x="365" y="490" width="205" height="137"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_Xu-VwH_XEe6-ppoycXFVXw" type="2002" element="_mN9H2H_XEe6-ppoycXFVXw">
+          <children xmi:type="notation:Node" xmi:id="_XvDOQH_XEe6-ppoycXFVXw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_XvEcYH_XEe6-ppoycXFVXw" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_mO5jAH_XEe6-ppoycXFVXw" type="3007" element="_mN-V8n_XEe6-ppoycXFVXw">
+              <children xmi:type="notation:Node" xmi:id="_mO6KEH_XEe6-ppoycXFVXw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_mO6KEX_XEe6-ppoycXFVXw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_mO6KEn_XEe6-ppoycXFVXw" type="3003" element="_mN-V83_XEe6-ppoycXFVXw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_mO6KE3_XEe6-ppoycXFVXw" fontName="Noto Sans"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO6KFH_XEe6-ppoycXFVXw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_mO5jAX_XEe6-ppoycXFVXw" fontName="Noto Sans" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mO5jAn_XEe6-ppoycXFVXw" x="30" y="29" width="156" height="30"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_XvEcYX_XEe6-ppoycXFVXw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_XvEcYn_XEe6-ppoycXFVXw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_Xu-VwX_XEe6-ppoycXFVXw" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xu-Vwn_XEe6-ppoycXFVXw" x="370" y="675"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_XvIGwH_XEe6-ppoycXFVXw" type="2002" element="_mN9u43_XEe6-ppoycXFVXw">
+          <children xmi:type="notation:Node" xmi:id="_XvIt0H_XEe6-ppoycXFVXw" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_XvIt0X_XEe6-ppoycXFVXw" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_XvIt0n_XEe6-ppoycXFVXw"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_XvIt03_XEe6-ppoycXFVXw"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_XvIGwX_XEe6-ppoycXFVXw" fontName="Noto Sans" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvIGwn_XEe6-ppoycXFVXw" x="64" y="675"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_m6NkEAzBEeuDCYUyY32CwA"/>
         <edges xmi:type="notation:Edge" xmi:id="_rzGl0H4_Ee6Qqdshu6mygw" type="4001" element="_rvl-0H4_Ee6Qqdshu6mygw" source="_m6xkwAzBEeuDCYUyY32CwA" target="_KDFLQgzCEeuDCYUyY32CwA">
@@ -185,7 +214,7 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0POQH4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0POQX4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_r0POQn4_Ee6Qqdshu6mygw" type="4001" element="_rvreZH4_Ee6Qqdshu6mygw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_BabTYAzCEeuDCYUyY32CwA">
+        <edges xmi:type="notation:Edge" xmi:id="_r0POQn4_Ee6Qqdshu6mygw" visible="false" type="4001" element="_rvreZH4_Ee6Qqdshu6mygw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_BabTYAzCEeuDCYUyY32CwA">
           <children xmi:type="notation:Node" xmi:id="_r0RDcH4_Ee6Qqdshu6mygw" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r0RDcX4_Ee6Qqdshu6mygw" x="-1" y="17"/>
           </children>
@@ -201,7 +230,7 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0TfsH4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0UGwH4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
         </edges>
-        <edges xmi:type="notation:Edge" xmi:id="_r0UGwX4_Ee6Qqdshu6mygw" type="4001" element="_rvsFdH4_Ee6Qqdshu6mygw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_BachgAzCEeuDCYUyY32CwA">
+        <edges xmi:type="notation:Edge" xmi:id="_r0UGwX4_Ee6Qqdshu6mygw" visible="false" type="4001" element="_rvsFdH4_Ee6Qqdshu6mygw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_BachgAzCEeuDCYUyY32CwA">
           <children xmi:type="notation:Node" xmi:id="_r0Ut034_Ee6Qqdshu6mygw" type="6001">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_r0VU4H4_Ee6Qqdshu6mygw" x="-5" y="-55"/>
           </children>
@@ -233,6 +262,38 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0Y_QH4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_r0ZmUH4_Ee6Qqdshu6mygw" id="(0.5,0.5)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XvTF4H_XEe6-ppoycXFVXw" type="4001" element="_Xu3BBH_XEe6-ppoycXFVXw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_Xu-VwH_XEe6-ppoycXFVXw">
+          <children xmi:type="notation:Node" xmi:id="_XvUUAH_XEe6-ppoycXFVXw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvUUAX_XEe6-ppoycXFVXw" y="-40"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XvUUAn_XEe6-ppoycXFVXw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvUUA3_XEe6-ppoycXFVXw" x="-5" y="-1"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_XvU7EH_XEe6-ppoycXFVXw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XvU7EX_XEe6-ppoycXFVXw" x="-4" y="-2"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XvTF4X_XEe6-ppoycXFVXw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XvTF4n_XEe6-ppoycXFVXw" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XvTF43_XEe6-ppoycXFVXw" points="[4, 137, -5, -116]$[9, 253, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XviWcH_XEe6-ppoycXFVXw" id="(0.4975609756097561,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XviWcX_XEe6-ppoycXFVXw" id="(0.5047619047619047,1.0)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_XviWcn_XEe6-ppoycXFVXw" type="4001" element="_Xu3oEn_XEe6-ppoycXFVXw" source="_KDFyUgzCEeuDCYUyY32CwA" target="_XvIGwH_XEe6-ppoycXFVXw">
+          <children xmi:type="notation:Node" xmi:id="_Xvi9gH_XEe6-ppoycXFVXw" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xvi9gX_XEe6-ppoycXFVXw" x="41" y="19"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Xvi9gn_XEe6-ppoycXFVXw" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xvi9g3_XEe6-ppoycXFVXw" x="1" y="-9"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_Xvi9hH_XEe6-ppoycXFVXw" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Xvi9hX_XEe6-ppoycXFVXw" x="8"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_XviWc3_XEe6-ppoycXFVXw"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XviWdH_XEe6-ppoycXFVXw" fontName="Noto Sans" fontHeight="12"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XviWdX_XEe6-ppoycXFVXw" points="[-4, 0, 195, -188]$[-199, 0, 0, -188]$[-199, 120, 0, -68]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XvjkkH_XEe6-ppoycXFVXw" id="(0.01951219512195122,0.4744525547445255)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_XvjkkX_XEe6-ppoycXFVXw" id="(0.5047619047619047,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_m4tIMAzBEeuDCYUyY32CwA" name="Welcome to Acme Bank" outgoingEdges="_rvl-0H4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
@@ -257,7 +318,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_BYBfoAzCEeuDCYUyY32CwA" name="Redirect to 01904 100000" incomingEdges="_rvreZH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_BYBfoAzCEeuDCYUyY32CwA" name="Redirect to 01904 100000" visible="false" incomingEdges="_rvreZH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.6"/>
       <semanticElements xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.6"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -268,7 +329,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Redirection%20Node']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_BYEi8AzCEeuDCYUyY32CwA" name="Redirect to 01904 100001" incomingEdges="_rvsFdH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_BYEi8AzCEeuDCYUyY32CwA" name="Redirect to 01904 100001" visible="false" incomingEdges="_rvsFdH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.7"/>
       <semanticElements xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.7"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -312,7 +373,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KBWF4wzCEeuDCYUyY32CwA" name="Please select one of the following options" outgoingEdges="_rvreZH4_Ee6Qqdshu6mygw _rvsFdH4_Ee6Qqdshu6mygw" incomingEdges="_rvq3VH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KBWF4wzCEeuDCYUyY32CwA" name="Please select one of the following options" outgoingEdges="_rvreZH4_Ee6Qqdshu6mygw _rvsFdH4_Ee6Qqdshu6mygw _Xu3BBH_XEe6-ppoycXFVXw _Xu3oEn_XEe6-ppoycXFVXw" incomingEdges="_rvq3VH4_Ee6Qqdshu6mygw" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="callcentre:Decision" href="example.callcentre#//@steps.5"/>
       <semanticElements xmi:type="callcentre:Decision" href="example.callcentre#//@steps.5"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -368,7 +429,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rvreZH4_Ee6Qqdshu6mygw" name="Savings" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_BYBfoAzCEeuDCYUyY32CwA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rvreZH4_Ee6Qqdshu6mygw" name="Savings" visible="false" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_BYBfoAzCEeuDCYUyY32CwA">
       <target xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.7"/>
       <semanticElements xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.7"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rvsFcH4_Ee6Qqdshu6mygw" size="2">
@@ -377,7 +438,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rvsFdH4_Ee6Qqdshu6mygw" name="Mortgages" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_BYEi8AzCEeuDCYUyY32CwA">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_rvsFdH4_Ee6Qqdshu6mygw" name="Mortgages" visible="false" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_BYEi8AzCEeuDCYUyY32CwA">
       <target xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.8"/>
       <semanticElements xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.8"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_rvssgH4_Ee6Qqdshu6mygw" size="2">
@@ -394,6 +455,48 @@
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_rvsshn4_Ee6Qqdshu6mygw" labelSize="12" showIcon="false"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Xu3BBH_XEe6-ppoycXFVXw" name="Savings" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_mN9H2H_XEe6-ppoycXFVXw">
+      <target xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.7"/>
+      <semanticElements xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.7"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Xu3BBX_XEe6-ppoycXFVXw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Xu3BBn_XEe6-ppoycXFVXw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_Xu3oEn_XEe6-ppoycXFVXw" name="Mortgages" sourceNode="_KBWF4wzCEeuDCYUyY32CwA" targetNode="_mN9u43_XEe6-ppoycXFVXw">
+      <target xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.8"/>
+      <semanticElements xmi:type="callcentre:Transition" href="example.callcentre#//@transitions.8"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_Xu3oE3_XEe6-ppoycXFVXw" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_Xu3oFH_XEe6-ppoycXFVXw" labelSize="12" showIcon="false"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mN9H2H_XEe6-ppoycXFVXw" name="Redirect to 01904 100000" incomingEdges="_Xu3BBH_XEe6-ppoycXFVXw">
+      <target xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.6"/>
+      <semanticElements xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.6"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mN9H2X_XEe6-ppoycXFVXw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="114,159,207">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_mN-V8n_XEe6-ppoycXFVXw" name="comment here" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="callcentre:Comment" href="example.callcentre#//@steps.6/@comments.0"/>
+        <semanticElements xmi:type="callcentre:Comment" href="example.callcentre#//@steps.6/@comments.0"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_mN-V83_XEe6-ppoycXFVXw" labelSize="12" showIcon="false" labelPosition="node" color="255,245,181">
+          <description xmi:type="style:SquareDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']/@subNodeMappings[name='commentNode']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']/@subNodeMappings[name='commentNode']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_mN9u43_XEe6-ppoycXFVXw" name="Redirect to 01904 100001" incomingEdges="_Xu3oEn_XEe6-ppoycXFVXw">
+      <target xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.7"/>
+      <semanticElements xmi:type="callcentre:CallRedirection" href="example.callcentre#//@steps.7"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mN9u5H_XEe6-ppoycXFVXw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="114,159,207">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_m4AkoAzBEeuDCYUyY32CwA"/>

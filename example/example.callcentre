@@ -6,7 +6,9 @@
   <steps xsi:type="callcentre:InputQuestion" name="Please enter your e-banking PIN" incoming="//@transitions.9" outgoing="//@transitions.5"/>
   <steps xsi:type="callcentre:Statement" name="Please be aware that the call may be recorded for training and quality purposes" incoming="//@transitions.4 //@transitions.5" outgoing="//@transitions.6"/>
   <steps xsi:type="callcentre:Decision" name="Please select one of the following options" incoming="//@transitions.6" outgoing="//@transitions.7 //@transitions.8"/>
-  <steps xsi:type="callcentre:CallRedirection" name="Redirect to 01904 100000" incoming="//@transitions.7"/>
+  <steps xsi:type="callcentre:CallRedirection" name="Redirect to 01904 100000" incoming="//@transitions.7">
+    <comments text="comment here"/>
+  </steps>
   <steps xsi:type="callcentre:CallRedirection" name="Redirect to 01904 100001" incoming="//@transitions.8"/>
   <transitions name="Yes"/>
   <transitions/>

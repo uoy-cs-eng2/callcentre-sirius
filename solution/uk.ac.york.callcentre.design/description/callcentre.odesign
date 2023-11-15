@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Call Centre Diagram" domainClass="callcentre::Model" enablePopupBars="true">
       <metamodel href="http://www.york.ac.uk/callcentre/1.1.0#/"/>
       <filters xsi:type="filter:CompositeFilterDescription" name="Hide No Transitions">
-        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']" semanticConditionExpression="aql:not self.isNoTransition()"/>
+        <filters xsi:type="filter:MappingFilter" mappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='transitions']/@edgeMappings[name='Transition%20Edge']" semanticConditionExpression="aql:not self.isNoTransition()"/>
       </filters>
       <validationSet name="Call Centre Rules">
         <ownedRules xsi:type="validation:SemanticValidationRule" name="Check Transition Source Not Equal Target" level="ERROR" message="The source and target of a transition cannot be the same" targetClass="callcentre::Transition">
@@ -33,14 +33,7 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
-        <containerMappings name="redirectContainer" semanticCandidatesExpression="feature:steps" domainClass="callcentre::CallRedirection">
-          <subNodeMappings name="commentNode" semanticCandidatesExpression="feature:comments" domainClass="callcentre::Comment">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            </style>
-          </subNodeMappings>
+        <containerMappings name="redirectContainer" label="Redirect Container" semanticCandidatesExpression="feature:steps" domainClass="callcentre::CallRedirection">
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -48,7 +41,7 @@
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
           </style>
         </containerMappings>
-        <toolSections name="Create Nodes">
+        <toolSections name="Node Creation Tools">
           <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Statement" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
@@ -99,7 +92,7 @@
               <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="callcentre::CallRedirection" referenceName="steps"/>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createComment" label="Create Comment" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']/@subNodeMappings[name='commentNode']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createComment" label="Create Comment" nodeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='comments']/@containerMappings[name='importRedirect']/@subNodeMappings[name='commentNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -108,7 +101,7 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
-      <additionalLayers name="Transition Layer">
+      <additionalLayers name="transitions" label="Transitions">
         <edgeMappings name="Transition Edge" semanticCandidatesExpression="aql:self.transitions" sourceMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Input%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']" targetMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Input%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Statement%20Node'] //@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']" targetFinderExpression="aql:self.to" sourceFinderExpression="aql:self.from" domainClass="callcentre::Transition" useDomainElement="true">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
@@ -117,8 +110,8 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <toolSections name="Create Transitions ">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Transition Edge" precondition="aql:not(preSource.equals(preTarget))" edgeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='Transition%20Layer']/@edgeMappings[name='Transition%20Edge']">
+        <toolSections name="Edge Creation Tools">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Create Transition Edge" precondition="aql:not(preSource.equals(preTarget))" edgeMappings="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@additionalLayers[name='transitions']/@edgeMappings[name='Transition%20Edge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -133,6 +126,17 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+      </additionalLayers>
+      <additionalLayers name="comments" label="Comments" activeByDefault="true">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="importRedirect" importedMapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@containerMappings[name='redirectContainer']">
+          <subNodeMappings name="commentNode" semanticCandidatesExpression="feature:comments" domainClass="callcentre::Comment">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            </style>
+          </subNodeMappings>
+        </containerMappings>
       </additionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="uk.ac.york.callcentre.design.Services"/>

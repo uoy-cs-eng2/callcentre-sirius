@@ -4,7 +4,7 @@
     <semanticResources>example.callcentre</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_l6xgUAzBEeuDCYUyY32CwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="new Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="6b77fe0b-9b17-4e5e-bb5e-6d5eb8d492f8">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="new Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="44b2d574-443c-422d-8f8c-fc71d7dcd828">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']"/>
         <target xmi:type="callcentre:Model" href="example.callcentre#/"/>
       </ownedRepresentationDescriptors>
@@ -297,7 +297,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']/@defaultLayer/@nodeMappings[name='Decision%20Node']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KBWF4wzCEeuDCYUyY32CwA" name="Please select one of the following options" outgoingEdges="_a9wAkIOVEe6wlKMJv-AEcQ _a9wAlYOVEe6wlKMJv-AEcQ" incomingEdges="_a9vZhYOVEe6wlKMJv-AEcQ" width="3" height="3" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_KBWF4wzCEeuDCYUyY32CwA" name="What would you like to talk to us about?" outgoingEdges="_a9wAkIOVEe6wlKMJv-AEcQ _a9wAlYOVEe6wlKMJv-AEcQ" incomingEdges="_a9vZhYOVEe6wlKMJv-AEcQ" width="3" height="3" resizeKind="NSEW">
       <target xmi:type="callcentre:Decision" href="example.callcentre#//@steps.5"/>
       <semanticElements xmi:type="callcentre:Decision" href="example.callcentre#//@steps.5"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

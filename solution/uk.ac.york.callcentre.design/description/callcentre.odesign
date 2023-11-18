@@ -13,28 +13,28 @@
       </validationSet>
       <defaultLayer name="Default">
         <nodeMappings name="Statement Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::Statement">
-          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Input Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::InputQuestion">
-          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
         <nodeMappings name="Decision Node" semanticCandidatesExpression="aql:self.steps" domainClass="callcentre::Decision">
-          <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelPosition="node" resizeKind="NSEW">
+          <style xsi:type="style:LozengeNodeDescription" labelSize="12" showIcon="false" labelExpression="feature:text" labelPosition="node" resizeKind="NSEW">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </nodeMappings>
         <containerMappings name="redirectContainer" label="Redirect Container" semanticCandidatesExpression="feature:steps" domainClass="callcentre::CallRedirection">
-          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" showIcon="false">
+          <style xsi:type="style:FlatContainerStyleDescription" labelSize="12" showIcon="false" labelExpression="feature:text">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>

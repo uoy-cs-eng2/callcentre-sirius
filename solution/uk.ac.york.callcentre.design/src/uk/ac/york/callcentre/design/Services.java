@@ -18,7 +18,7 @@ public class Services {
     }
     
     public boolean isNoTransition(Transition self) {
-    	return "no".equalsIgnoreCase(self.getName());
+    	return "No".equalsIgnoreCase(self.getName());
     }
     
 }

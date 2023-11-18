@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<callcentre:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:callcentre="http://www.york.ac.uk/callcentre/1.1.0">
+<callcentre:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:callcentre="http://www.york.ac.uk/callcentre/1.1.0" name="AcmeBank">
   <steps xsi:type="callcentre:Statement" name="WelcomeStatement" text="Welcome to Acme Bank" outgoing="//@transitions.2"/>
   <steps xsi:type="callcentre:Decision" name="ExistingCustomerDecision" text="Are you an existing customer?" incoming="//@transitions.2" outgoing="//@transitions.3 //@transitions.4"/>
   <steps xsi:type="callcentre:InputQuestion" name="AccountNumberInput" text="Please enter your account number" incoming="//@transitions.3" outgoing="//@transitions.9"/>

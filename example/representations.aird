@@ -4,7 +4,7 @@
     <semanticResources>example.callcentre</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_l6xgUAzBEeuDCYUyY32CwA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="new Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="f6ab12dd-2d80-4964-8029-b62e368a5e53">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_m5OFkAzBEeuDCYUyY32CwA" name="Call Centre Diagram" repPath="#_m3uQwAzBEeuDCYUyY32CwA" changeId="f6ab12dd-2d80-4964-8029-b62e368a5e53">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/uk.ac.york.callcentre.design/description/callcentre.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Call%20Centre%20Diagram']"/>
         <target xmi:type="callcentre:Model" href="example.callcentre#/"/>
       </ownedRepresentationDescriptors>

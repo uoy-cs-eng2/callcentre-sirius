@@ -53,7 +53,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addTextPropertyDescriptor(object);
 			addFromPropertyDescriptor(object);
 			addToPropertyDescriptor(object);
 		}
@@ -61,18 +61,18 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Text feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addTextPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transition_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transition_name_feature",
+						getResourceLocator(), getString("_UI_Transition_text_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_text_feature",
 								"_UI_Transition_type"),
-						CallcentrePackage.Literals.TRANSITION__NAME, true, false, false,
+						CallcentrePackage.Literals.TRANSITION__TEXT, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -135,7 +135,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Transition) object).getName();
+		String label = ((Transition) object).getText();
 		return label == null || label.length() == 0 ? getString("_UI_Transition_type")
 				: getString("_UI_Transition_type") + " " + label;
 	}
@@ -152,7 +152,7 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Transition.class)) {
-		case CallcentrePackage.TRANSITION__NAME:
+		case CallcentrePackage.TRANSITION__TEXT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

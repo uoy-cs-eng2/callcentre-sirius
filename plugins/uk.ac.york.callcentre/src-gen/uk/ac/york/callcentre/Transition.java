@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.york.callcentre.Transition#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.york.callcentre.Transition#getText <em>Text</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.Transition#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.Transition#getTo <em>To</em>}</li>
  * </ul>
@@ -24,26 +24,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Transition extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see uk.ac.york.callcentre.CallcentrePackage#getTransition_Name()
+	 * @return the value of the '<em>Text</em>' attribute.
+	 * @see #setText(String)
+	 * @see uk.ac.york.callcentre.CallcentrePackage#getTransition_Text()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getText();
 
 	/**
-	 * Sets the value of the '{@link uk.ac.york.callcentre.Transition#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link uk.ac.york.callcentre.Transition#getText <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Text</em>' attribute.
+	 * @see #getText()
 	 * @generated
 	 */
-	void setName(String value);
+	void setText(String value);
 
 	/**
 	 * Returns the value of the '<em><b>From</b></em>' reference.

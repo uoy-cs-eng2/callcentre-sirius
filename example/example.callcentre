@@ -13,11 +13,11 @@
   <transitions name="Yes"/>
   <transitions/>
   <transitions from="//@steps.0" to="//@steps.1"/>
-  <transitions name="Yes" from="//@steps.1" to="//@steps.2"/>
-  <transitions name="No" from="//@steps.1" to="//@steps.4"/>
+  <transitions text="Yes" from="//@steps.1" to="//@steps.2"/>
+  <transitions text="No" from="//@steps.1" to="//@steps.4"/>
   <transitions from="//@steps.3" to="//@steps.4"/>
   <transitions from="//@steps.4" to="//@steps.5"/>
-  <transitions name="Savings" from="//@steps.5" to="//@steps.6"/>
-  <transitions name="Mortgages" from="//@steps.5" to="//@steps.7"/>
+  <transitions text="Savings" from="//@steps.5" to="//@steps.6"/>
+  <transitions text="Mortgages" from="//@steps.5" to="//@steps.7"/>
   <transitions from="//@steps.2" to="//@steps.3"/>
 </callcentre:Model>

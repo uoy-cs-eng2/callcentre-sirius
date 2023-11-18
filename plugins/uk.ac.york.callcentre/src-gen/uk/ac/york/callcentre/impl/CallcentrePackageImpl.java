@@ -263,7 +263,7 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 	 * @generated
 	 */
 	@Override
-	public EAttribute getTransition_Name() {
+	public EAttribute getTransition_Text() {
 		return (EAttribute) transitionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -430,7 +430,7 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 		createEAttribute(inputQuestionEClass, INPUT_QUESTION__VARIABLE);
 
 		transitionEClass = createEClass(TRANSITION);
-		createEAttribute(transitionEClass, TRANSITION__NAME);
+		createEAttribute(transitionEClass, TRANSITION__TEXT);
 		createEReference(transitionEClass, TRANSITION__FROM);
 		createEReference(transitionEClass, TRANSITION__TO);
 
@@ -519,7 +519,7 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class,
+		initEAttribute(getTransition_Text(), ecorePackage.getEString(), "text", null, 0, 1, Transition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_From(), this.getStep(), this.getStep_Outgoing(), "from", null, 0, 1,
 				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,

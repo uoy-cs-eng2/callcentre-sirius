@@ -505,13 +505,13 @@ public interface CallcentrePackage extends EPackage {
 	int INPUT_QUESTION_OPERATION_COUNT = STEP_OPERATION_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Text</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__NAME = 0;
+	int TRANSITION__TEXT = 0;
 
 	/**
 	 * The feature id for the '<em><b>From</b></em>' reference.
@@ -714,15 +714,15 @@ public interface CallcentrePackage extends EPackage {
 	EClass getTransition();
 
 	/**
-	 * Returns the meta object for the attribute '{@link uk.ac.york.callcentre.Transition#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link uk.ac.york.callcentre.Transition#getText <em>Text</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see uk.ac.york.callcentre.Transition#getName()
+	 * @return the meta object for the attribute '<em>Text</em>'.
+	 * @see uk.ac.york.callcentre.Transition#getText()
 	 * @see #getTransition()
 	 * @generated
 	 */
-	EAttribute getTransition_Name();
+	EAttribute getTransition_Text();
 
 	/**
 	 * Returns the meta object for the reference '{@link uk.ac.york.callcentre.Transition#getFrom <em>From</em>}'.
@@ -958,12 +958,12 @@ public interface CallcentrePackage extends EPackage {
 		EClass TRANSITION = eINSTANCE.getTransition();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute TRANSITION__NAME = eINSTANCE.getTransition_Name();
+		EAttribute TRANSITION__TEXT = eINSTANCE.getTransition_Text();
 
 		/**
 		 * The meta object literal for the '<em><b>From</b></em>' reference feature.

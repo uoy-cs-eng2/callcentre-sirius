@@ -23,7 +23,7 @@ import uk.ac.york.callcentre.Transition;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link uk.ac.york.callcentre.impl.TransitionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link uk.ac.york.callcentre.impl.TransitionImpl#getText <em>Text</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.impl.TransitionImpl#getFrom <em>From</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.impl.TransitionImpl#getTo <em>To</em>}</li>
  * </ul>
@@ -32,24 +32,24 @@ import uk.ac.york.callcentre.Transition;
  */
 public class TransitionImpl extends MinimalEObjectImpl.Container implements Transition {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String TEXT_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getText() <em>Text</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getText()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String text = TEXT_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getFrom() <em>From</em>}' reference.
@@ -96,8 +96,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 */
 	@Override
-	public String getName() {
-		return name;
+	public String getText() {
+		return text;
 	}
 
 	/**
@@ -106,11 +106,11 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 */
 	@Override
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setText(String newText) {
+		String oldText = text;
+		text = newText;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, CallcentrePackage.TRANSITION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, CallcentrePackage.TRANSITION__TEXT, oldText, text));
 	}
 
 	/**
@@ -295,8 +295,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case CallcentrePackage.TRANSITION__NAME:
-			return getName();
+		case CallcentrePackage.TRANSITION__TEXT:
+			return getText();
 		case CallcentrePackage.TRANSITION__FROM:
 			if (resolve)
 				return getFrom();
@@ -317,8 +317,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case CallcentrePackage.TRANSITION__NAME:
-			setName((String) newValue);
+		case CallcentrePackage.TRANSITION__TEXT:
+			setText((String) newValue);
 			return;
 		case CallcentrePackage.TRANSITION__FROM:
 			setFrom((Step) newValue);
@@ -338,8 +338,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case CallcentrePackage.TRANSITION__NAME:
-			setName(NAME_EDEFAULT);
+		case CallcentrePackage.TRANSITION__TEXT:
+			setText(TEXT_EDEFAULT);
 			return;
 		case CallcentrePackage.TRANSITION__FROM:
 			setFrom((Step) null);
@@ -359,8 +359,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case CallcentrePackage.TRANSITION__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case CallcentrePackage.TRANSITION__TEXT:
+			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
 		case CallcentrePackage.TRANSITION__FROM:
 			return from != null;
 		case CallcentrePackage.TRANSITION__TO:
@@ -380,8 +380,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (text: ");
+		result.append(text);
 		result.append(')');
 		return result.toString();
 	}

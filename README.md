@@ -1,6 +1,8 @@
-# Example Sirius Diagram
+# Example Sirius Editor
 
-This is an example of a model editor with Eclipse Sirius, for a "call centre" metamodel.
+This is an examplegraphical model editor with Eclipse Sirius, for a metamodel that describes automated call centre flows.
+
+![](screenshots/callcentre-editor.png)
 
 ## Running the example
 

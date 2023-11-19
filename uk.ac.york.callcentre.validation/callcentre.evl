@@ -1,0 +1,35 @@
+context Decision {
+	
+	constraint AtLeast2Outgoing {
+		check: self.outgoing.size() >= 2
+		
+		message: "Decision " + self.text + 
+			" must have at least 2 outgoing" +
+			" transitions"
+	}
+	
+	critique TextEndsWithQuestionMark {
+		check {
+			var text = self.text;
+			return text.endsWith("?");
+		}
+	}
+}
+
+context Step {
+	
+	critique TextStartsWithUpperCase {
+		check: self.text.firstToUpperCase() = self.text
+		
+		message: "The text of step " + self.text + " should start with an upper-case letter"
+			
+		fix {
+			title: "Rename to " + 
+				self.text.firstToUpperCase()
+
+			do {
+				self.text = self.text.firstToUpperCase();
+			}
+		}
+	}
+}

@@ -11,6 +11,7 @@ This is an example graphical model editor with Eclipse Sirius, for a metamodel t
    1. `uk.ac.york.callcentre`
    1. `uk.ac.york.callcentre.edit`
    1. `uk.ac.york.callcentre.editor`
+   1. `uk.ac.york.callcentre.validation`
 1. Launch a new Eclipse runtime configuration.
 1. Import the following projects into the runtime instance of Eclipse.
    1. `uk.ac.york.callcentre.design`

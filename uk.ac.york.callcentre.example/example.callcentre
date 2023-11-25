@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<callcentre:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:callcentre="http://www.york.ac.uk/callcentre/1.1.0" name="AcmeBank">
+  <steps xsi:type="callcentre:Statement" name="WelcomeStatement" text="Welcome to Acme Bank" outgoing="//@transitions.2"/>
+  <steps xsi:type="callcentre:Decision" name="ExistingCustomerDecision" text="Are you an existing customer?" incoming="//@transitions.2" outgoing="//@transitions.3 //@transitions.4"/>
+  <steps xsi:type="callcentre:InputQuestion" name="AccountNumberInput" text="Please enter your account number" incoming="//@transitions.3" outgoing="//@transitions.9"/>
+  <steps xsi:type="callcentre:InputQuestion" name="PINInput" text="Please enter your PIN" incoming="//@transitions.9" outgoing="//@transitions.5" variable="pin"/>
+  <steps xsi:type="callcentre:Statement" name="CallRecordedStatement" text="Please be aware that the call may be recorded for training and quality purposes" incoming="//@transitions.4 //@transitions.5" outgoing="//@transitions.6"/>
+  <steps xsi:type="callcentre:Decision" name="TalkAboutDecision" text="What would you like to talk to us about?" incoming="//@transitions.6" outgoing="//@transitions.7 //@transitions.8"/>
+  <steps xsi:type="callcentre:CallRedirection" name="SavingsRedirection" text="Redirect to 01904 100000" incoming="//@transitions.7" number="01904 100001">
+    <comments text="Confirm with Alice"/>
+  </steps>
+  <steps xsi:type="callcentre:CallRedirection" name="MortgagesRedirection" text="Redirect to 01904 100001" incoming="//@transitions.8" number="01904 100001"/>
+  <transitions/>
+  <transitions/>
+  <transitions from="//@steps.0" to="//@steps.1"/>
+  <transitions text="Yes" from="//@steps.1" to="//@steps.2"/>
+  <transitions text="No" from="//@steps.1" to="//@steps.4"/>
+  <transitions from="//@steps.3" to="//@steps.4"/>
+  <transitions from="//@steps.4" to="//@steps.5"/>
+  <transitions text="Savings" from="//@steps.5" to="//@steps.6"/>
+  <transitions text="Mortgages" from="//@steps.5" to="//@steps.7"/>
+  <transitions from="//@steps.2" to="//@steps.3"/>
+</callcentre:Model>

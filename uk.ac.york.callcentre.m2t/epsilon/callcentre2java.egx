@@ -5,7 +5,7 @@ rule Model2App
 
 	parameters : Map{}
 
-	target : "src-gen/" + m.name.toLowerCase() + "/" + m.name.ftuc() + ".java"
+	target : m.name.toLowerCase() + "/" + m.name.ftuc() + ".java"
 }
 
 rule Statement2Java 
@@ -57,5 +57,5 @@ rule CallRedirection2Java
 }
 
 operation Step getJavaFileName() {
-	return "src-gen/" + self.eContainer.name.toLowerCase() + "/" + self.name.ftuc() + ".java";
+	return self.eContainer.name.toLowerCase() + "/" + self.name.ftuc() + ".java";
 }

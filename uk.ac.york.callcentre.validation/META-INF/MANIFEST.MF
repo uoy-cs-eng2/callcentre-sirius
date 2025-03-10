@@ -4,6 +4,6 @@ Bundle-Name: Validation
 Bundle-SymbolicName: uk.ac.york.callcentre.validation;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: uk.ac.york.callcentre.validation
-Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Require-Bundle: org.eclipse.epsilon.evl.emf.validation,
  org.eclipse.ui.ide

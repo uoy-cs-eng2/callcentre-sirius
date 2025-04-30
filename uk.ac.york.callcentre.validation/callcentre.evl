@@ -9,6 +9,7 @@ context Decision {
 	}
 	
 	critique TextEndsWithQuestionMark {
+		guard: self.text.isDefined()
 		check {
 			var text = self.text;
 			return text.endsWith("?");
@@ -19,6 +20,8 @@ context Decision {
 context Step {
 	
 	critique TextStartsWithUpperCase {
+		guard: self.text.isDefined()
+
 		check: self.text.firstToUpperCase() = self.text
 		
 		message: "The text of step " + self.text + " should start with an upper-case letter"

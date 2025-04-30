@@ -1,0 +1,93 @@
+@test
+operation decision_notEnoughOutgoing() {
+  var d = new Decision;
+  var errors = validateModel();
+
+  assertEquals(1, errors.size);
+  assertEquals("AtLeast2Outgoing", errors.first.constraint.name);
+  assertFalse(errors.first.constraint.isCritique);
+  assertEquals(d, errors.first.instance);
+}
+
+@test
+operation decision_good() {
+  var d = new Decision;
+  d.addStatement('Yes', 'Welcome');
+  d.addStatement('No', 'Goodbye');
+
+  var errors = validateModel();
+  assertEquals(0, errors.size);
+}
+
+@test
+operation decision_notEndingWithQuestion() {
+  var d = new Decision;
+  d.text = 'Not a question';
+  d.addStatement('Yes', 'Welcome');
+  d.addStatement('No', 'Goodbye');
+
+  var errors = validateModel();
+  assertEquals(1, errors.size);
+  assertEquals("TextEndsWithQuestionMark", errors.first.constraint.name);
+  assertEquals(d, errors.first.instance);
+}
+
+@test
+operation decision_endingWithQuestion() {
+  var d = new Decision;
+  d.text = 'Actually a question?';
+  d.addStatement('Yes', 'Welcome');
+  d.addStatement('No', 'Goodbye');
+
+  var errors = validateModel();
+  assertEquals(0, errors.size);
+}
+
+@test
+operation statement_notStartWithUpperCase() {
+  var st = new Statement;
+  st.text = 'does not start with uppercase letter';
+
+  var errors = validateModel();
+  assertEquals(1, errors.size());
+
+  var error = errors.first;
+  assertEquals("TextStartsWithUpperCase", error.constraint.name);
+  assertEquals(st, error.instance);
+
+  assertEquals(1, error.fixes.size);
+  error.fixes[0].perform();
+
+  // We need to throw away the old validation results first
+  runTarget("dispose-evl");
+  errors = validateModel();
+  errors.println();
+  assertEquals(0, errors.size());
+}
+
+@test
+operation statement_good() {
+  var st = new Statement;
+  st.text = 'Starts with uppercase letter';
+
+  var errors = validateModel();
+  assertEquals(0, errors.size());
+}
+
+operation validateModel() {
+  runTarget("run-evl");
+  return EVL!UnsatisfiedConstraint.all;
+}
+
+operation Decision addStatement(transitionText: String, statement: String) {
+  var st = new Statement;
+  st.text = statement;
+  self.linkTo(st, transitionText);
+}
+
+operation Decision linkTo(s: Step, text: String) {
+  var t = new Transition;
+  t.from = self;
+  t.to = s;
+  t.text = text;
+}

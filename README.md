@@ -12,6 +12,7 @@ This is an example graphical model editor with [Eclipse Sirius](https://eclipse.
    1. `uk.ac.york.callcentre.edit`
    1. `uk.ac.york.callcentre.editor`
    1. `uk.ac.york.callcentre.validation`
+   1. `uk.ac.york.callcentre.validation.tests`
    1. `uk.ac.york.callcentre.design`
 1. Right-click on `uk.ac.york.callcentre` and select "Run as - Eclipse application": this will launch a *nested* Eclipse workspace.
 1. Import the following projects into the nested workspace:
@@ -28,6 +29,13 @@ To experiment with the notation:
 1. In the nested workspace, click on the "Reload Installed VSMs" button in the main toolbar (highlighted below in red): the diagrams will automatically update themselves.
 
 ![Screenshot of Eclipse toolbar with "Reload Installed VSMs" highlighted](./screenshots/reload-vsms.png)
+
+## Running tests on the EVL rules
+
+The `uk.ac.york.callcentre.validation.tests` project includes [EUnit](https://eclipse.dev/epsilon/doc/eunit/) tests for the EVL validation rules.
+
+To run these tests, right-click on the `Run EVL tests.launch` files inside the project and select "Run As - Run EVL tests".
+The EUnit view will open with the results (which should pass).
 
 ## Generating code from the model
 

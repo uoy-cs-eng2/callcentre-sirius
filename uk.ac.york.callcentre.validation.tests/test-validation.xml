@@ -1,0 +1,24 @@
+<project default="run-tests">
+
+	<target name="run-tests">
+		<epsilon.eunit src="validation.eunit">
+			<modeltasks>
+				<epsilon.emf.loadModel name="Model"
+					metamodelfile="${basedir}/../uk.ac.york.callcentre/model/callcentre.ecore"
+					modelfile="dummy.xmi"
+					read="false" store="false"/>
+			</modeltasks>
+		</epsilon.eunit>
+	</target>
+
+	<target name="run-evl">
+		<epsilon.evl src="${basedir}/../uk.ac.york.callcentre.validation/callcentre.evl" failOnErrors="false" failOnWarnings="false" exportAsModel="EVL">
+			<model ref="Model" />
+		</epsilon.evl>
+	</target>
+
+	<target name="dispose-evl">
+		<epsilon.disposeModel model="EVL" />
+	</target>
+
+</project>

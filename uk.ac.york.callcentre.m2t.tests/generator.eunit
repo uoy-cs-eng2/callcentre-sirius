@@ -1,0 +1,92 @@
+@test
+operation empty() {
+  runTarget("run-egx");
+}
+
+@test
+operation redirection() {
+  var m = new Model;
+  m.name = 'CallCentre';
+
+  var st = new Statement;
+  st.name = 'Welcome';
+  st.text = 'Welcome to the Call Centre';
+  m.steps.add(st);
+
+  var cr = new CallRedirection;
+  cr.name = 'MainSupport';
+  cr.text = 'Redirecting to main support line';
+  cr.number = '01234';
+  m.steps.add(cr);
+  st.linkTo(null, cr);
+
+  runTarget("run-egx");
+
+  // NOTE: the 'basedir' variable is provided via the Ant file.
+  // Order is expected first, then actual output.
+  assertEqualDirectories(
+    basedir + '/expected-output/redirection',
+    basedir + '/test-output/callcentre'
+  );
+}
+
+@test
+operation decision() {
+  var m = new Model;
+  m.name = 'CallCentre';
+
+  var d = new Decision;
+  d.name = 'FirstChoice';
+  d.text = 'Choose department';
+  m.steps.add(d);
+
+  var cr1 = new CallRedirection;
+  cr1.name = 'SalesRedirect';
+  cr1.number = '12345';
+  m.steps.add(cr1);
+  d.linkTo('Sales', cr1);
+
+  var cr2 = new CallRedirection;
+  cr2.name = 'SupportRedirect';
+  cr2.number = '67890';
+  m.steps.add(cr2);
+  d.linkTo('Support', cr2);
+
+  runTarget("run-egx");
+  assertEqualFiles(
+    basedir + '/expected-output/decision/FirstChoice.java',
+    basedir + '/test-output/callcentre/FirstChoice.java'
+  );
+}
+
+@test
+operation inputQuestion() {
+  var m = new Model;
+  m.name = 'CallCentre';
+
+  var iq = new InputQuestion;
+  iq.name = 'PINRequest';
+  iq.text = 'Please enter your PIN';
+  m.steps.add(iq);
+
+  var cr = new CallRedirection;
+  cr.name = 'AuthenticatedRedirect';
+  cr.text = 'Forwarding call to the support team';
+  cr.number = '121212';
+  m.steps.add(cr);
+  iq.linkTo(null, cr);
+
+  runTarget("run-egx");
+  assertEqualFiles(
+    basedir + '/expected-output/inputQuestion/PINRequest.java',
+    basedir + '/test-output/callcentre/PINRequest.java'
+  );
+}
+
+operation Step linkTo(text: String, to: Step) {
+  var t = new Transition;
+  t.text = text;
+  t.from = self;
+  t.to = to;
+  self.eContainer.transitions.add(t);
+}

@@ -1,0 +1,28 @@
+<project default="run-tests">
+  <target name="run-tests">
+  	<epsilon.eunit src="generator.eunit">
+		<parameter name="basedir" value="${basedir}" />
+  		<modeltasks>
+  		  	<epsilon.emf.loadModel
+  		  		name="Model" read="false" store="false"
+  		  		metamodeluri="http://www.york.ac.uk/callcentre/1.1.0"
+  		  		modelfile="dummy.xmi" />
+  		</modeltasks>
+  	</epsilon.eunit>
+  </target>
+
+  <target name="run-egx">
+  	<!-- Delete and recreate the test output directory -->
+  	<delete dir="${basedir}/test-output" failonerror="false"/>
+  	<mkdir dir="${basedir}/test-output" />
+
+  	<!-- Run the EGX script and collect the results -->
+  	<epsilon.egl src="${basedir}/../uk.ac.york.callcentre.m2t/epsilon/callcentre2java.egx" outputroot="${basedir}/test-output">
+  		<model ref="Model" />
+  	</epsilon.egl>
+
+  	<!-- Make Eclipse reload the folder -->
+  	<eclipse.refreshLocal resource="/uk.ac.york.callcentre.m2t.tests/test-output" />
+  </target>
+
+</project>

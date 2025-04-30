@@ -34,7 +34,7 @@ To experiment with the notation:
 
 The `uk.ac.york.callcentre.validation.tests` project includes [EUnit](https://eclipse.dev/epsilon/doc/eunit/) tests for the EVL validation rules.
 
-To run these tests, right-click on the `Run EVL tests.launch` files inside the project and select "Run As - Run EVL tests".
+To run these tests, right-click on the `Run EVL tests.launch` file inside the project and select "Run As - Run EVL tests".
 The EUnit view will open with the results (which should pass).
 
 ## Generating code from the model
@@ -45,3 +45,9 @@ To run these programs, ensure you have [Epsilon](https://eclipse.dev/epsilon/) i
 
 * `Launch EVL validation.launch` will check the internal consistency of the `acmebank.callcentre` model, and show any validation errors in a new "Validation" view within Eclipse.
 * `Launch EGX code generation.launch` will produce code within the `src-gen` folder of the `acmebank.application` project.
+
+## Running tests on the EGX script
+
+The `uk.ac.york.callcentre.m2t.tests` project includes EUnit tests for the EGX/EGL code generator.
+
+To run the tests, right-click on its `Run M2T Tests.launch` file inside the project and select "Run As - Run M2T Tests".

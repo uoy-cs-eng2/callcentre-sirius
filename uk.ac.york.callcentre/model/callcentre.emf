@@ -12,10 +12,10 @@ abstract class Step {
 	attr String text;
 	ref Transition[*]#to incoming;
 	ref Transition[*]#from outgoing;
-	val Comment[*] comments;
 }
 
 class Statement extends Step {}
+
 class Decision extends Step {}
 
 class CallRedirection extends Step {
@@ -30,9 +30,4 @@ class Transition {
 	attr String text;
 	ref Step#outgoing from;
 	ref Step#incoming to;
-}
-
-class Comment {
-	attr String author;
-	attr String text;
 }

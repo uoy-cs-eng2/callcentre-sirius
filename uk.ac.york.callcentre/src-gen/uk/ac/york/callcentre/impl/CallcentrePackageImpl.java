@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import uk.ac.york.callcentre.CallRedirection;
 import uk.ac.york.callcentre.CallcentreFactory;
 import uk.ac.york.callcentre.CallcentrePackage;
-import uk.ac.york.callcentre.Comment;
 import uk.ac.york.callcentre.Decision;
 import uk.ac.york.callcentre.InputQuestion;
 import uk.ac.york.callcentre.Model;
@@ -75,13 +74,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 	 * @generated
 	 */
 	private EClass decisionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass commentEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -243,16 +235,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 	 * @generated
 	 */
 	@Override
-	public EReference getStep_Comments() {
-		return (EReference) stepEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public EClass getTransition() {
 		return transitionEClass;
 	}
@@ -353,36 +335,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 	 * @generated
 	 */
 	@Override
-	public EClass getComment() {
-		return commentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getComment_Author() {
-		return (EAttribute) commentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getComment_Text() {
-		return (EAttribute) commentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public CallcentreFactory getCallcentreFactory() {
 		return (CallcentreFactory) getEFactoryInstance();
 	}
@@ -417,7 +369,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 		createEAttribute(stepEClass, STEP__TEXT);
 		createEReference(stepEClass, STEP__INCOMING);
 		createEReference(stepEClass, STEP__OUTGOING);
-		createEReference(stepEClass, STEP__COMMENTS);
 
 		statementEClass = createEClass(STATEMENT);
 
@@ -433,10 +384,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 		createEAttribute(transitionEClass, TRANSITION__TEXT);
 		createEReference(transitionEClass, TRANSITION__FROM);
 		createEReference(transitionEClass, TRANSITION__TO);
-
-		commentEClass = createEClass(COMMENT);
-		createEAttribute(commentEClass, COMMENT__AUTHOR);
-		createEAttribute(commentEClass, COMMENT__TEXT);
 	}
 
 	/**
@@ -495,9 +442,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 		initEReference(getStep_Outgoing(), this.getTransition(), this.getTransition_From(), "outgoing", null, 0, -1,
 				Step.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStep_Comments(), this.getComment(), null, "comments", null, 0, -1, Step.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 
 		initEClass(statementEClass, Statement.class, "Statement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -527,12 +471,6 @@ public class CallcentrePackageImpl extends EPackageImpl implements CallcentrePac
 		initEReference(getTransition_To(), this.getStep(), this.getStep_Incoming(), "to", null, 0, 1, Transition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(commentEClass, Comment.class, "Comment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComment_Author(), ecorePackage.getEString(), "author", null, 0, 1, Comment.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComment_Text(), ecorePackage.getEString(), "text", null, 0, 1, Comment.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

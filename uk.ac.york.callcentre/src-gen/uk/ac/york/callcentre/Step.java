@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link uk.ac.york.callcentre.Step#getText <em>Text</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.Step#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.Step#getOutgoing <em>Outgoing</em>}</li>
- *   <li>{@link uk.ac.york.callcentre.Step#getComments <em>Comments</em>}</li>
  * </ul>
  *
  * @see uk.ac.york.callcentre.CallcentrePackage#getStep()
@@ -98,17 +97,5 @@ public interface Step extends EObject {
 	 * @generated
 	 */
 	EList<Transition> getOutgoing();
-
-	/**
-	 * Returns the value of the '<em><b>Comments</b></em>' containment reference list.
-	 * The list contents are of type {@link uk.ac.york.callcentre.Comment}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Comments</em>' containment reference list.
-	 * @see uk.ac.york.callcentre.CallcentrePackage#getStep_Comments()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<Comment> getComments();
 
 } // Step

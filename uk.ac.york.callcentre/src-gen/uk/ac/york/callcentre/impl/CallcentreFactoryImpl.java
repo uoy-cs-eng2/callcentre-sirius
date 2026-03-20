@@ -68,8 +68,6 @@ public class CallcentreFactoryImpl extends EFactoryImpl implements CallcentreFac
 			return createInputQuestion();
 		case CallcentrePackage.TRANSITION:
 			return createTransition();
-		case CallcentrePackage.COMMENT:
-			return createComment();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -139,17 +137,6 @@ public class CallcentreFactoryImpl extends EFactoryImpl implements CallcentreFac
 	public Decision createDecision() {
 		DecisionImpl decision = new DecisionImpl();
 		return decision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Comment createComment() {
-		CommentImpl comment = new CommentImpl();
-		return comment;
 	}
 
 	/**

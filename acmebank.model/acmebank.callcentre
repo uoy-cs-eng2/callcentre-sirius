@@ -6,9 +6,7 @@
   <steps xsi:type="callcentre:InputQuestion" name="PINInput" text="Please enter your PIN" incoming="//@transitions.7" outgoing="//@transitions.3" variable="pin"/>
   <steps xsi:type="callcentre:Statement" name="CallRecordedStatement" text="Please be aware that the call may be recorded for training and quality purposes" incoming="//@transitions.2 //@transitions.3" outgoing="//@transitions.4"/>
   <steps xsi:type="callcentre:Decision" name="TalkAboutDecision" text="What would you like to talk to us about?" incoming="//@transitions.4" outgoing="//@transitions.5 //@transitions.6"/>
-  <steps xsi:type="callcentre:CallRedirection" name="SavingsRedirection" text="Redirect to 01904 100000" incoming="//@transitions.5" number="01904 100001">
-    <comments text="Confirm with Alice"/>
-  </steps>
+  <steps xsi:type="callcentre:CallRedirection" name="SavingsRedirection" text="Redirect to 01904 100000" incoming="//@transitions.5" number="01904 100001"/>
   <steps xsi:type="callcentre:CallRedirection" name="MortgagesRedirection" text="Redirect to 01904 100001" incoming="//@transitions.6" number="01904 100001"/>
   <transitions from="//@steps.0" to="//@steps.1"/>
   <transitions text="Yes" from="//@steps.1" to="//@steps.2"/>

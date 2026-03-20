@@ -14,13 +14,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import uk.ac.york.callcentre.CallcentrePackage;
-import uk.ac.york.callcentre.Comment;
 import uk.ac.york.callcentre.Step;
 import uk.ac.york.callcentre.Transition;
 
@@ -36,7 +33,6 @@ import uk.ac.york.callcentre.Transition;
  *   <li>{@link uk.ac.york.callcentre.impl.StepImpl#getText <em>Text</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.impl.StepImpl#getIncoming <em>Incoming</em>}</li>
  *   <li>{@link uk.ac.york.callcentre.impl.StepImpl#getOutgoing <em>Outgoing</em>}</li>
- *   <li>{@link uk.ac.york.callcentre.impl.StepImpl#getComments <em>Comments</em>}</li>
  * </ul>
  *
  * @generated
@@ -101,16 +97,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * @ordered
 	 */
 	protected EList<Transition> outgoing;
-
-	/**
-	 * The cached value of the '{@link #getComments() <em>Comments</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComments()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Comment> comments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,19 +196,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<Comment> getComments() {
-		if (comments == null) {
-			comments = new EObjectContainmentEList<Comment>(Comment.class, this, CallcentrePackage.STEP__COMMENTS);
-		}
-		return comments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -247,8 +220,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 			return ((InternalEList<?>) getIncoming()).basicRemove(otherEnd, msgs);
 		case CallcentrePackage.STEP__OUTGOING:
 			return ((InternalEList<?>) getOutgoing()).basicRemove(otherEnd, msgs);
-		case CallcentrePackage.STEP__COMMENTS:
-			return ((InternalEList<?>) getComments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -269,8 +240,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 			return getIncoming();
 		case CallcentrePackage.STEP__OUTGOING:
 			return getOutgoing();
-		case CallcentrePackage.STEP__COMMENTS:
-			return getComments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,10 +267,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 			getOutgoing().clear();
 			getOutgoing().addAll((Collection<? extends Transition>) newValue);
 			return;
-		case CallcentrePackage.STEP__COMMENTS:
-			getComments().clear();
-			getComments().addAll((Collection<? extends Comment>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -326,9 +291,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 		case CallcentrePackage.STEP__OUTGOING:
 			getOutgoing().clear();
 			return;
-		case CallcentrePackage.STEP__COMMENTS:
-			getComments().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -349,8 +311,6 @@ public abstract class StepImpl extends MinimalEObjectImpl.Container implements S
 			return incoming != null && !incoming.isEmpty();
 		case CallcentrePackage.STEP__OUTGOING:
 			return outgoing != null && !outgoing.isEmpty();
-		case CallcentrePackage.STEP__COMMENTS:
-			return comments != null && !comments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

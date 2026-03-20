@@ -211,29 +211,6 @@ public class CallcentreItemProviderAdapterFactory extends CallcentreAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link uk.ac.york.callcentre.Comment} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected CommentItemProvider commentItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link uk.ac.york.callcentre.Comment}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createCommentAdapter() {
-		if (commentItemProvider == null) {
-			commentItemProvider = new CommentItemProvider(this);
-		}
-
-		return commentItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -350,8 +327,6 @@ public class CallcentreItemProviderAdapterFactory extends CallcentreAdapterFacto
 			inputQuestionItemProvider.dispose();
 		if (transitionItemProvider != null)
 			transitionItemProvider.dispose();
-		if (commentItemProvider != null)
-			commentItemProvider.dispose();
 	}
 
 }

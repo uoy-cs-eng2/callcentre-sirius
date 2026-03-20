@@ -158,22 +158,13 @@ public interface CallcentrePackage extends EPackage {
 	int STEP__OUTGOING = 3;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STEP__COMMENTS = 4;
-
-	/**
 	 * The number of structural features of the '<em>Step</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STEP_FEATURE_COUNT = 5;
+	int STEP_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Step</em>' class.
@@ -239,15 +230,6 @@ public interface CallcentrePackage extends EPackage {
 	 * @ordered
 	 */
 	int STATEMENT__OUTGOING = STEP__OUTGOING;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATEMENT__COMMENTS = STEP__COMMENTS;
 
 	/**
 	 * The number of structural features of the '<em>Statement</em>' class.
@@ -334,15 +316,6 @@ public interface CallcentrePackage extends EPackage {
 	int DECISION__OUTGOING = STEP__OUTGOING;
 
 	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DECISION__COMMENTS = STEP__COMMENTS;
-
-	/**
 	 * The number of structural features of the '<em>Decision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -395,15 +368,6 @@ public interface CallcentrePackage extends EPackage {
 	 * @ordered
 	 */
 	int CALL_REDIRECTION__OUTGOING = STEP__OUTGOING;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CALL_REDIRECTION__COMMENTS = STEP__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Number</b></em>' attribute.
@@ -467,15 +431,6 @@ public interface CallcentrePackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUT_QUESTION__OUTGOING = STEP__OUTGOING;
-
-	/**
-	 * The feature id for the '<em><b>Comments</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT_QUESTION__COMMENTS = STEP__COMMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Variable</b></em>' attribute.
@@ -548,52 +503,6 @@ public interface CallcentrePackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSITION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link uk.ac.york.callcentre.impl.CommentImpl <em>Comment</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see uk.ac.york.callcentre.impl.CommentImpl
-	 * @see uk.ac.york.callcentre.impl.CallcentrePackageImpl#getComment()
-	 * @generated
-	 */
-	int COMMENT = 7;
-
-	/**
-	 * The feature id for the '<em><b>Author</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT__AUTHOR = 0;
-
-	/**
-	 * The feature id for the '<em><b>Text</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT__TEXT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Comment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Comment</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMMENT_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link uk.ac.york.callcentre.Model <em>Model</em>}'.
@@ -691,17 +600,6 @@ public interface CallcentrePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStep_Outgoing();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link uk.ac.york.callcentre.Step#getComments <em>Comments</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Comments</em>'.
-	 * @see uk.ac.york.callcentre.Step#getComments()
-	 * @see #getStep()
-	 * @generated
-	 */
-	EReference getStep_Comments();
 
 	/**
 	 * Returns the meta object for class '{@link uk.ac.york.callcentre.Transition <em>Transition</em>}'.
@@ -809,38 +707,6 @@ public interface CallcentrePackage extends EPackage {
 	EClass getDecision();
 
 	/**
-	 * Returns the meta object for class '{@link uk.ac.york.callcentre.Comment <em>Comment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Comment</em>'.
-	 * @see uk.ac.york.callcentre.Comment
-	 * @generated
-	 */
-	EClass getComment();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uk.ac.york.callcentre.Comment#getAuthor <em>Author</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Author</em>'.
-	 * @see uk.ac.york.callcentre.Comment#getAuthor()
-	 * @see #getComment()
-	 * @generated
-	 */
-	EAttribute getComment_Author();
-
-	/**
-	 * Returns the meta object for the attribute '{@link uk.ac.york.callcentre.Comment#getText <em>Text</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Text</em>'.
-	 * @see uk.ac.york.callcentre.Comment#getText()
-	 * @see #getComment()
-	 * @generated
-	 */
-	EAttribute getComment_Text();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -940,14 +806,6 @@ public interface CallcentrePackage extends EPackage {
 		EReference STEP__OUTGOING = eINSTANCE.getStep_Outgoing();
 
 		/**
-		 * The meta object literal for the '<em><b>Comments</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STEP__COMMENTS = eINSTANCE.getStep_Comments();
-
-		/**
 		 * The meta object literal for the '{@link uk.ac.york.callcentre.impl.TransitionImpl <em>Transition</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1036,32 +894,6 @@ public interface CallcentrePackage extends EPackage {
 		 * @generated
 		 */
 		EClass DECISION = eINSTANCE.getDecision();
-
-		/**
-		 * The meta object literal for the '{@link uk.ac.york.callcentre.impl.CommentImpl <em>Comment</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see uk.ac.york.callcentre.impl.CommentImpl
-		 * @see uk.ac.york.callcentre.impl.CallcentrePackageImpl#getComment()
-		 * @generated
-		 */
-		EClass COMMENT = eINSTANCE.getComment();
-
-		/**
-		 * The meta object literal for the '<em><b>Author</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMMENT__AUTHOR = eINSTANCE.getComment_Author();
-
-		/**
-		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute COMMENT__TEXT = eINSTANCE.getComment_Text();
 
 	}
 

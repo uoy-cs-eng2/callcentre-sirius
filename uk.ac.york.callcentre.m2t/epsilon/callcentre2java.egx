@@ -57,5 +57,5 @@ rule CallRedirection2Java
 }
 
 operation Step getJavaFileName() {
-	return self.eContainer.name.toLowerCase() + "/" + self.name.ftuc() + ".java";
+	return self.eContainer.name.toLowerCase() + "/" + self.name.ftuc() + (self.isTypeOf(InputQuestion) ? "Base" : "") + ".java";
 }

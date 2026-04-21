@@ -2,7 +2,7 @@ package [%=m.name.toLowerCase()%];
 
 import java.util.Scanner;
 
-public class [%=iq.name.ftuc()%] {
+public abstract class [%=iq.name.ftuc()%]Base {
 	
 	protected String value;
 	
@@ -17,11 +17,7 @@ public class [%=iq.name.ftuc()%] {
 		[%=m.name%].get[%=iq.getNextStep().name.ftuc()%]().run([%=m.name%]);
 	}
 	
-	protected boolean validate([%=m.name.ftuc()%] [%=m.name%]) {
-		[%=out.startPreserve("/*", "*/", "validate-body", true)%]
-		return true;
-		[%=out.stopPreserve()%]
-	}
+	protected abstract boolean validate([%=m.name.ftuc()%] [%=m.name%]);
 	
 	public String getValue() {
 		return value;

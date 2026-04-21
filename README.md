@@ -46,7 +46,7 @@ To run these programs, ensure you have [Epsilon](https://eclipse.dev/epsilon/) i
 * `Launch EVL validation.launch` will check the internal consistency of the `acmebank.callcentre` model, and show any validation errors in a new "Validation" view within Eclipse.
 * `Launch EGX code generation.launch` will produce code within the `src-gen` folder of the `acmebank.application` project.
 
-## Running tests on the EGX script
+## Running tests on the EGX script
 
 The `uk.ac.york.callcentre.m2t.tests` project includes EUnit tests for the EGX/EGL code generator.
 

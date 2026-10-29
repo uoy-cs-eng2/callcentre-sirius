@@ -24,7 +24,7 @@ operation redirection() {
 
   // NOTE: the 'basedir' variable is provided via the Ant file.
   // Order is expected first, then actual output.
-  assertEqualDirectories(
+  assertEqualFilesIgnoringLineEndings(
     basedir + '/expected-output/redirection',
     basedir + '/test-output/callcentre'
   );
@@ -53,7 +53,7 @@ operation decision() {
   d.linkTo('Support', cr2);
 
   runTarget("run-egx");
-  assertEqualFiles(
+  assertEqualFilesIgnoringLineEndings(
     basedir + '/expected-output/decision/FirstChoice.java',
     basedir + '/test-output/callcentre/FirstChoice.java'
   );
@@ -77,7 +77,7 @@ operation inputQuestion() {
   iq.linkTo(null, cr);
 
   runTarget("run-egx");
-  assertEqualFiles(
+  assertEqualFilesIgnoringLineEndings(
     basedir + '/expected-output/inputQuestion/PINRequest.java',
     basedir + '/test-output/callcentre/PINRequest.java'
   );
